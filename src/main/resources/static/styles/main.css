@@ -1,0 +1,54 @@
+body.main{
+    background: papayawhip;
+}
+
+div.bigMain{
+    background: whitesmoke;
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 80vh;
+}
+img.logo{
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+.login{
+    background: black;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#login p{
+    padding: 8px;
+    text-align: right;
+    margin: 0px;
+}
+div.menu{
+    width: 200px;
+    text-align: center;
+    min-height: 80vh;
+    float: left;
+
+}
+.menu{
+    background: black;
+    color: white;
+}
+#menu p{
+    border-top: dotted;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    margin: 0px;
+}
+div.chat{
+    float: left;
+    margin: 10px;
+    min-height: 80vh;
+}
+.activeMenu{
+    background: whitesmoke;
+    color: black;
+    border-right: dotted;
+    border-left: dotted;
+}
