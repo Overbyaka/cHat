@@ -1,4 +1,4 @@
-package ru.grishkova.cHat.entity;
+package ru.grishkova.cHat.model;
 
 import org.hibernate.annotations.Type;
 
