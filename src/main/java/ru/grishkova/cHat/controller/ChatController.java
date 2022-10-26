@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import ru.grishkova.cHat.model.ChatMessage;
+import ru.grishkova.cHat.repository.ChatMessageRepostiroty;
 import ru.grishkova.cHat.repository.UserRepository;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +20,8 @@ public class ChatController {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    ChatMessageRepostiroty chatMessageRepostiroty;
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, Model model) {
@@ -30,6 +34,8 @@ public class ChatController {
             return "redirect:/login";
         }
         model.addAttribute("username", username);
+        Iterable<ChatMessage> chatMessages = chatMessageRepostiroty.findAll();
+        model.addAttribute("chatMessages", chatMessages);
 
         return "main";
     }

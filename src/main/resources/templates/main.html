@@ -11,7 +11,8 @@
         <img src="../static/images/cHat.png" alt="logo" class="logo">
     </header>
     <div class="login" id="login">
-        <p>Вы зашли как <b id="username" th:text="${username}"></b> (Выход)</p>
+        <span>Вы зашли как <b id="username" th:text="${username}"></b></span>
+        <a th:href="@{/logout}">(Выйти)</a>
     </div>
     <div class="bigMain">
         <div class="content">
@@ -21,6 +22,10 @@
             </div>
             <div class="chat" id="connecting">
                 <div id="messageArea">
+                    <li class="chat-message" th:each="element : ${chatMessages}">
+                        <strong class="nickname" th:text="${element.sender}"></strong>
+                        <span th:text="${element.content}"></span>
+                    </li>
                 </div>
                 <form id="messageForm">
                     <div class="send">

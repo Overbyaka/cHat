@@ -18,10 +18,11 @@ img.logo{
     color: white;
     margin-left: 50px;
     margin-right: 50px;
+    height:5vh;
 }
-#login p{
+#login span{
     padding: 8px;
-    text-align: right;
+    float: right;
     margin: 0px;
 }
 div.menu{
@@ -69,4 +70,9 @@ li{
 }
 strong{
     margin-right: 5px;
+}
+a {
+    color:white;
+    float: right;
+    margin: 1.1vh;
 }
