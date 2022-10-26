@@ -2,12 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Customer</title>
+    <title>cHat: Вход</title>
+    <link href="../static/styles/login.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../static/images/ch.ico" type="image/x-icon"/>
 </head>
-<body>
-    <div>
-        <form class="form-signin" method="POST" action="/auth/login">
-            <h2 class="form-signin-heading">Login</h2>
+<body class="main">
+    <header class>
+        <img src="../static/images/cHat.png" alt="logo" class="logo">
+    </header>
+    <div class="login" id="login">
+        <p><br></p>
+    </div>
+    <div class="in">
+        <form method="POST" action="/auth/login">
+            <h1 class="login">Вход</h1>
             <p>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
@@ -16,7 +24,7 @@
                 <label for="password">Password</label>
                 <input type="password" id="Password" name="password" class="form-control" placeholder="Password" required>
             </p>
-            <button class="btn btn-lg btn-primary brn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary brn-block" type="submit">Вход</button>
         </form>
     </div>
 </body>

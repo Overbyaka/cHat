@@ -1,0 +1,48 @@
+body.main{
+    background: papayawhip;
+}
+img.logo{
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+.login{
+    background: black;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#login p{
+    padding: 8px;
+    text-align: right;
+    margin: 0px;
+}
+h1.login{
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    border-bottom: groove;
+    padding-bottom: 10px;
+}
+div.in{
+    background: black;
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 80vh;
+    align-items: center;
+}
+p{
+    color: white;
+}
+form{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+button{
+    margin: auto;
+    display: block;
+}

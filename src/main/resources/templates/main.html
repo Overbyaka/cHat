@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>cHat</title>
     <link href="../static/styles/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/ch.ico" type="image/x-icon"/>
 </head>
 <body class ="main">
     <header class>
         <img src="../static/images/cHat.png" alt="logo" class="logo">
     </header>
-        <div class="login" id="login">
-            <p>Вы зашли как <b>Котик</b> (Выход)</p>
-        </div>
+    <div class="login" id="login">
+        <p>Вы зашли как <b id="username" th:text="${username}"></b> (Выход)</p>
+    </div>
     <div class="bigMain">
         <div class="content">
             <div class="menu" id="menu">
                 <p><b>Меню</b></p>
                 <p class="activeMenu">Общий чат</p>
-                <p>dima448</p>
-                <p>Анатолий</p>
-                <p></p>
             </div>
-            <div class="chat">
-                <p><b>dima448:</b> Всем привет! Как дела?</p>
-                <p><b>Анатолий:</b> Супер! А у тебя?</p>
+            <div class="chat" id="connecting">
+                <div id="messageArea">
+                </div>
+                <form id="messageForm">
+                    <div class="send">
+                        <input id="message">
+                        <button>Отправить</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    <!-- https://cdnjs.com/libraries/sockjs-client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <!-- https://cdnjs.com/libraries/stomp.js/ -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script type="text/javascript">
+        var block = document.getElementById("block");
+        block.scrollTop = block.scrollHeight;
+    </script>
 </body>
 </html>

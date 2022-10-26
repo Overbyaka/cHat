@@ -13,6 +13,8 @@ public class AuthController {
         return "login";
     }
 
+
+
     @GetMapping("/success")
     public String getSuccessPage(){
         return "success";
