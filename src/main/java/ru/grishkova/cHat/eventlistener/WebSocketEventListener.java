@@ -1,4 +1,4 @@
-package ru.grishkova.cHat;
+package ru.grishkova.cHat.eventlistener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
